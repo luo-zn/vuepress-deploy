@@ -1,9 +1,9 @@
-FROM node:10.14.2-alpine as base
+FROM node:alpine
 
 LABEL "com.github.actions.name"="Vuepress deploy"
 LABEL "com.github.actions.description"="A GitHub Action to build and deploy Vuepress sites to GitHub Pages"
-LABEL "com.github.actions.icon"="upload-cloud"
-LABEL "com.github.actions.color"="gray-dark"
+LABEL "com.github.actions.icon"="link"
+LABEL "com.github.actions.color"="blue"
 
 LABEL "repository"="https://github.com/luo-zn/vuepress-deploy.git"
 LABEL "homepage"="https://github.com/luo-zn/vuepress-deploy.git"
