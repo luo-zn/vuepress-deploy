@@ -12,4 +12,5 @@ LABEL "maintainer"="lzn <jannanlo@163.com>"
 RUN apk add --no-cache git jq && npm install -g vuepress
 
 COPY entrypoint.sh /entrypoint.sh
+RUN chmod +x /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
