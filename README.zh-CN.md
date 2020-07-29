@@ -56,8 +56,7 @@ jobs:
 | `ACCESS_TOKEN` | github的access token | `secrets`  |  **Yes** |
 | `TARGET_REPO` | 目标仓库，如：`luo-zn/blog`. 默认值当前仓库 | `env` | **No** |
 | `TARGET_BRANCH` | 目标仓库的分支，如：`gh-pages`.默认值gh-pages | `env` | **No** |
-| `TARGET_LINK` | 目标仓库的完整链接，用于其他平台，
-如:`https://user:${{ secrets.CODING_TOKEN }}@gitlab.coding.come/org/repo.git`. | `env` | **No** |
+| `TARGET_LINK` | 目标仓库的完整链接，用于其他平台，如:`https://user:${{ secrets.CODING_TOKEN }}@gitlab.coding.come/org/repo.git`. | `env` | **No** |
 | `BUILD_SCRIPT` | 构建vuepress项目的命令脚本。如: `yarn && yarn build` | `env` | **Yes** |
 | `BUILD_DIR` | 构建完成后的输出目录。如: `blog/.vuepress/dist/` | `env` | **Yes** |
 | `CNAME` | Github Pages站点别名。 | `env` | **no** |
