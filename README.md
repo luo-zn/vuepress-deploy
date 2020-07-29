@@ -1,8 +1,10 @@
-# vuepress-deploy
+English | [简体中文](./README.zh-CN.md)
+
+# vuepress-deploy :computer:
 
 A GitHub Action to build and deploy Vuepress sites to GitHub Pages
 
-## Prerequisite
+## Prerequisite :clipboard:
 
 ### Create a personal access token
 
@@ -23,7 +25,7 @@ more infomation: [accss token](https://help.github.com/en/github/authenticating-
 
 more infomation:[create secrets](https://help.github.com/en/actions/automating-your-workflow-with-github-actions/creating-and-using-encrypted-secrets)
 
-## Usage
+## Usage :hammer:
 
 Create vuepress-deploy.yml in .github/workflows directory in the root of the repository.
 
@@ -47,7 +49,7 @@ jobs:
         BUILD_DIR: blog/.vuepress/dist
 ```
 
-## Parameters
+## Parameters :postbox:
 
 |  Parameter |  Description | Type | Required
 | :------------ | :------------ |:------------ |:------------ |
@@ -59,3 +61,4 @@ jobs:
 | `BUILD_DIR` | The output of the build-script above. e.g.: `blog/.vuepress/dist/` | `env` | **Yes** |
 | `CNAME` | Alias Record of your site. | `env` | **no** |
 
+note: User pages must be built from the master branch.
