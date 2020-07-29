@@ -1,0 +1,9 @@
+name: 'Vuepress deploy to GitHub Pages'
+description: 'This action will handle the building and deploying process Vuepress to GitHub Pages.'
+author: 'lzn'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+branding:
+  icon: 'link'
+  color: 'blue'
