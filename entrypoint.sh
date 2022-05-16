@@ -55,11 +55,11 @@ function main(){
   echo "==> Prepare to deploy ${TARGET_BRANCH}"
   echo "==> BUILD_DIR=${BUILD_DIR}"
   pwd
+  git config --global --add safe.directory /github/workspace/lznSite/.vuepress/dist
   git init  
   git branch -m "${TARGET_BRANCH}"
   git config user.name "${GITHUB_ACTOR}"
-  git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
-  git config --global --add safe.directory /github/workspace/lznSite/.vuepress/dist
+  git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"  
   if [ -z "$(git status --porcelain)" ]; then
       echo "The BUILD_DIR is setting error or nothing produced" && \
       echo "Exiting..."
