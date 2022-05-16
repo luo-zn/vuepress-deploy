@@ -57,7 +57,9 @@ function main(){
   git branch -m "${TARGET_BRANCH}"
   git config user.name "${GITHUB_ACTOR}"
   git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
-  git config --add safe.direcotry ${BUILD_DIR}
+  pwd
+  echo "==> BUILD_DIR=${BUILD_DIR}"
+  git config --add safe.direcotry /github/workspace/${BUILD_DIR}
   if [ -z "$(git status --porcelain)" ]; then
       echo "The BUILD_DIR is setting error or nothing produced" && \
       echo "Exiting..."
