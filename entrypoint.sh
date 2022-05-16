@@ -53,9 +53,7 @@ function main(){
   set_deploy_repo
 
   echo "==> Prepare to deploy ${TARGET_BRANCH}"
-  echo "==> BUILD_DIR=${BUILD_DIR}"
-  pwd
-  git config --global --add safe.directory /github/workspace/lznSite/.vuepress/dist
+  git config --global --add safe.directory ${BUILD_DIR}
   git init  
   git branch -m "${TARGET_BRANCH}"
   git config user.name "${GITHUB_ACTOR}"
