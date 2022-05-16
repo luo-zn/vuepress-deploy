@@ -53,13 +53,13 @@ function main(){
   set_deploy_repo
 
   echo "==> Prepare to deploy ${TARGET_BRANCH}"
-  git init
+  echo "==> BUILD_DIR=${BUILD_DIR}"
+  pwd
+  git init  
   git branch -m "${TARGET_BRANCH}"
   git config user.name "${GITHUB_ACTOR}"
   git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
-  pwd
-  echo "==> BUILD_DIR=${BUILD_DIR}"
-  git config --add safe.direcotry /github/workspace/${BUILD_DIR}
+  git config --global --add safe.directory /github/workspace/lznSite/.vuepress/dist
   if [ -z "$(git status --porcelain)" ]; then
       echo "The BUILD_DIR is setting error or nothing produced" && \
       echo "Exiting..."
