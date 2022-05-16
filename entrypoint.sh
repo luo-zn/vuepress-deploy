@@ -53,7 +53,7 @@ function main(){
   set_deploy_repo
 
   echo "==> Prepare to deploy ${TARGET_BRANCH}"
-  git config --global --add safe.directory ${BUILD_DIR}
+  git config --global --add safe.directory $(pwd)
   git init  
   git branch -m "${TARGET_BRANCH}"
   git config user.name "${GITHUB_ACTOR}"
